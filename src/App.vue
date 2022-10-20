@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+import AppLayout from "./components/AppLayout.vue";
+import PomodoroTimer from "./components/PomodoroTimer.vue";
+import PomodoroActivity from "./components/PomodoroActivity.vue";
+</script>
 <template>
-  <p class="font-medium text-blue-800 text-center">Test</p>
+  <AppLayout>
+    <PomodoroTimer />
+    <PomodoroActivity />
+  </AppLayout>
 </template>
