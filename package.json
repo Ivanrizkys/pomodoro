@@ -11,7 +11,8 @@
     "@chenfengyuan/vue-countdown": "2",
     "axios": "^1.1.3",
     "dayjs": "^1.11.6",
-    "vue": "^3.2.38"
+    "vue": "^3.2.38",
+    "vue3-print-nb": "^0.1.4"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
