@@ -57,6 +57,7 @@ const handleStopCounting = () => {
 };
 
 const handleEndCounting = () => {
+  state.value.timerKey++;
   const audio = new Audio(endAudio);
   audio.play();
   const requestData = {
@@ -73,7 +74,6 @@ const handleEndCounting = () => {
       refetchData
         .then((response) => {
           state.value.activities = response.data;
-          state.value.timerKey++;
         })
         .catch(() => {
           state.value.isError = true;
