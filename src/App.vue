@@ -20,6 +20,7 @@ const state = ref({
   activities: [],
   isError: false,
   errorMessage: "",
+  timerKey: 0,
 });
 const timerRef = ref(null);
 
@@ -72,6 +73,7 @@ const handleEndCounting = () => {
       refetchData
         .then((response) => {
           state.value.activities = response.data;
+          state.value.timerKey++;
         })
         .catch(() => {
           state.value.isError = true;
@@ -131,6 +133,7 @@ const handleCounter = (type) => {
   <ErrorToast :is-error="state.isError">{{ state.errorMessage }}</ErrorToast>
   <AppLayout>
     <PomodoroTimer
+      :key="state.timerKey"
       ref="timerRef"
       :initial-time="state.expectedCounting"
       :show-form-note="state.showFormNote"
