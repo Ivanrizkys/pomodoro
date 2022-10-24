@@ -53,10 +53,10 @@ const handleStartCounting = () => {
 
 const handleStopCounting = () => {
   timerRef.value.countDownEl.end();
-  document.title = "Pomodoro";
 };
 
 const handleEndCounting = () => {
+  document.title = "Pomodoro";
   state.value.timerKey++;
   const audio = new Audio(endAudio);
   audio.play();
